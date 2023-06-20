@@ -22,7 +22,7 @@ with open(pipeline_definition_file, 'r') as f:
 
 # Create the pipeline
 response = sagemaker_client.create_pipeline(
-    PipelineName='MyPipeline_jenkins',
+    PipelineName='MyPipeline-jenkins-devx',
     PipelineDefinition=pipeline_definition,
     RoleArn='arn:aws:iam::390831823934:role/team-role-dep-aiml-sagemaker-execution',
     Tags=[
