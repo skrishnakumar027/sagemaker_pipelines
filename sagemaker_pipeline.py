@@ -1,0 +1,12 @@
+import boto3
+
+# Create a session using the AWS credentials from Jenkins environment variables
+session = boto3.Session(
+    aws_access_key_id='ASIAVV73ELQ7GKQ2XYXL',
+    aws_secret_access_key='1p/yuZblPkTXmrGMspufnHawESJhN4c3Dey5UVPL',
+    aws_session_token='IQoJb3JpZ2luX2VjEFEaCXVzLWVhc3QtMiJIMEYCIQCEnrp/2v++BTCCJ1h90KK/gn4KYNKJuIVfZaZrplL/ngIhAOQkIbMrjYqixXZ7Gxmsd6DZDpDP4ImTleo9lxLGGjhwKooDCKr//////////wEQARoMMzkwODMxODIzOTM0IgzMuWvhEKVXSVofAAYq3gKBI4PSam2PCLelkKmzrJbUtf16CTo9RIpdjE44z7ckPRa8xPxO5oRVia7RKfyfnwcY15au8+x4YUEJnKc7h8QNlv4wEuT2TJzjVvjzK6tmy20P+r96O15b7FIhD3ujY5cGWhJn/Hp9Q+/2ApKs8Y8hooPtAtx2KN7b6a2NvkmrZxrrYvtJsK+VYMmxRSQtAmwaqW/t+fqfrYAx7xO2sviTPv6B4aJ/kR/W0b9hTsFeE7xbcevewVR3dRQZBmEv1D2zilfaHyWXc6lLIf+p/z4GLVzekpRTcOSWI7aJE0NYcmrC5zSvvKenjlTtBTbUmjETg5Hek6p1rVZqVOAiaWewDHCARa6vrjbejjL5M2rP0sNRGNxIbIzNRQWzZe4P+v14P494DIcuakWxKLl6hRfLfCp4Bz1QTD1j9aOe1vgMc6a3ZzxMiR7QzQwL+YZwb9EP76fTrPr2Uu86XsfdDzCascekBjqlAWKFcobwZiF6supn/qucrUYNKDkV3mIW4zi/Gy2YoPxMiqhNETZv1DusVtHuG7y9aDWaE/wRDCxW72j/6GPZ7yqcVI0kbROW/Gk9m+A/J8v3RMBwe/fyQtpDZG67x2xsFvLAuCGemVhp133LsMd04Qhsh/HT4cWxJwKbcX2z65L31shco60lm61fLO0m9JdLc559BB89F4U4eWO9BY07NIRARKieZw=='
+)
+
+# Use the session to interact with AWS services
+s3_client = session.client('s3')
+s3_client.list_buckets()
