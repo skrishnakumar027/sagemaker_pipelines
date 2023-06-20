@@ -8,7 +8,7 @@ pipeline {
       }
       stage('Hello') {
         steps {
-          sh 'python3 sagemaker_pipeline.py'
+          sh 'pip3 install boto3 && python3 sagemaker_pipeline.py'
         }
       }
     }
