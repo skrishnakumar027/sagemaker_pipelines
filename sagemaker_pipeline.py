@@ -9,4 +9,4 @@ session = boto3.Session(
 
 # Use the session to interact with AWS services
 s3_client = session.client('s3')
-s3_client.list_buckets()
+print(s3_client.list_buckets())
