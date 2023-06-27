@@ -44,3 +44,6 @@ def main():
     # Print bucket names
     for bucket_name in bucket_names:
         print(bucket_name)
+
+if __name__=='__main__':
+    main()
