@@ -3,7 +3,7 @@ import os
 
 def create_session(role_arn=None, role_session_name='jenkins_session'):
     if role_arn:
-        sts_client = session.client('sts')
+        sts_client = boto3.client('sts')
         
         # Assume the role in the external account
         response = sts_client.assume_role(RoleArn=role_arn,RoleSessionName=role_session_name)
